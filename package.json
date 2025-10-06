@@ -1,0 +1,19 @@
+{
+  "name": "node.js-note",
+  "version": "1.0.0",
+  "description": "node and express.js series",
+  "main": "01_app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-with-chetan/Node.js-Notes.git"
+  },
+  "author": "chetan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/code-with-chetan/Node.js-Notes/issues"
+  },
+  "homepage": "https://github.com/code-with-chetan/Node.js-Notes#readme"
+}
