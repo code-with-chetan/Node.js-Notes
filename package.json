@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "node and express.js series",
   "main": "01_app.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/code-with-chetan/Node.js-Notes/issues"
   },
-  "homepage": "https://github.com/code-with-chetan/Node.js-Notes#readme"
+  "homepage": "https://github.com/code-with-chetan/Node.js-Notes#readme",
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "express": "^5.1.0"
+  }
 }
