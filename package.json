@@ -2,7 +2,7 @@
   "name": "node.js-note",
   "version": "1.0.0",
   "description": "node and express.js series",
-  "main": "01_app.js",
+  "main": "app.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
