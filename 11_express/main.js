@@ -9,7 +9,6 @@ app.use(express.static(staticPath));
 
 app.get("/", (req, res) => {
   //   const _fileName = new URL(import.meta.url).pathname;
-  //   console.log(_fileName);
   //   console.log(import.meta.dirname);
   //   const homePagePath = path.join(import.meta.dirname, "public", "index.html");
   //   res.sendFile(homePagePath);
