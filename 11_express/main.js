@@ -13,19 +13,27 @@ const data = await response.json();
 console.log(data);
 
 //finding current directory and filepath.
-console.log(import.meta.dirname);
-console.log(import.meta.filename);
+// console.log(import.meta.dirname);
+// console.log(import.meta.filename);
 
 //prefer absolute path.
 const staticPath = path.join(import.meta.dirname, "public");
 app.use(express.static(staticPath));
 
-app.get("/", (req, res) => {
-  //   const _fileName = new URL(import.meta.url).pathname;
-  //   console.log(import.meta.dirname);
-  //   const homePagePath = path.join(import.meta.dirname, "public", "index.html");
-  //   res.sendFile(homePagePath);
+app.get("/public/:username/article/:slug", (req, res) => {
+  console.log(req.params);
+  const formattedSlog = req.params.slug.replace(/-/g, " ");
+  res.send(
+    `<h1>Hello my name is ${req.params.username} by ${formattedSlog}</h1>`
+  );
 });
+
+// app.get("/", (req, res) => {
+//   const _fileName = new URL(import.meta.url).pathname;
+//   console.log(import.meta.dirname);
+//   const homePagePath = path.join(import.meta.dirname, "public", "index.html");
+//   res.sendFile(homePagePath);
+// });
 
 app.listen(PORT, () => {
   console.log(`server running at http:localhost//${PORT}`);
