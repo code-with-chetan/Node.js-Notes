@@ -8,17 +8,17 @@ const app = express();
 const staticPath = path.join(import.meta.dirname, "public");
 app.use(express.static(staticPath));
 app.use(express.urlencoded({ extended: true }));
-app.use((req, res) => {
-  res.status(404).send("page not found.");
-});
+// app.use((req, res) => {
+//   res.status(404).send("page not found.");
+// });
 
 //In newer versions of Node.js (14.8+) ,you can use top-level await without needing to wrap it in an
 //async function.
-const response = await fetch(
-  "https://official-joke-api.appspot.com/random_joke"
-);
-const data = await response.json();
-console.log(data);
+// const response = await fetch(
+//   "https://official-joke-api.appspot.com/random_joke"
+// );
+// const data = await response.json();
+// console.log(data);
 
 //form submission
 app.post("/contact", (req, res) => {
