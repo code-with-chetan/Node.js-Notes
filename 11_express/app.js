@@ -9,6 +9,8 @@ app.set("view engine", "ejs");
 
 app.use("/", ejsRoutes);
 
+app.set("view engine", "ejs");
+
 app.listen(PORT, () => {
   console.log(`Server is running at http://localhost:${PORT}`);
 });
