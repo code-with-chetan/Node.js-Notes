@@ -6,9 +6,18 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Students Report Card.</h1>
-    <p>Name: <%=student.name%></p>
-    <p>Semester: <%=student.semester%></p>
-    <p>Subject: <%=student.subject%></p>
+    <%-include('header')%>
+    <h1>Students Report Card</h1>
+    <%# ejs comment%>
+    <ul>
+      <%student.map((stu)=>{%>
+      <li>
+        <p>Name:<%=stu.name%></p>
+        <p>Semester:<%=stu.semester%></p>
+        <p>Subject:<%=stu.subject%></p>
+      </li>
+      <% })%>
+    </ul>
+    <%-include('footer')%>
   </body>
 </html>

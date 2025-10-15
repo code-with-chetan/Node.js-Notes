@@ -11,11 +11,24 @@ router.get("/", (req, res) => {
 });
 
 router.get("/report", (req, res) => {
-  const student = {
-    name: "chetan rana",
-    semester: "fourth",
-    subject: "information and technology",
-  };
+  const student = [
+    {
+      name: "chetan rana",
+      semester: "fourth",
+      subject: "information and technology",
+    },
+
+    {
+      name: "Pawan K.C",
+      semester: "fourth",
+      subject: "information and technology",
+    },
+    {
+      name: "Manish k.c",
+      semester: "fourth",
+      subject: "information and technology",
+    },
+  ];
 
   return res.render("report", { student });
 });
