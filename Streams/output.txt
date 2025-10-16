@@ -1,0 +1,5 @@
+let's write something in the input.text
+That's text should be copied in the output.text
+In Node.js Streams there is a topics called Streams and Buffer
+through which we transfer data in the form of chunk.
+we can write data in the output file chunk by chunk.
