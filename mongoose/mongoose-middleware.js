@@ -1,21 +1,27 @@
 import mongoose from "mongoose";
 
-await mongoose.connect("mongodb://localhost:27017/mongoose-middleware");
+await mongoose.connect("URL/database-name");
 mongoose.set("debug", true);
 
-const userSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  age: Number,
-  createdAt: { type: Date, default: Date.now },
-  updatedAt: { type: Date, default: Date.now },
-});
+const userSchema = new mongoose.Schema(
+  {
+    name: String,
+    email: String,
+    age: Number,
+    //   createdAt: { type: Date, default: Date.now },
+    //   updatedAt: { type: Date, default: Date.now },
+  },
+  {
+    timestamps: true,
+  }
+);
 
-userSchema.pre(["updateOne", "findOneAndUpdate"], function (next) {
-  console.log("🔥 Middleware triggered!");
-  this.set({ updatedAt: Date.now() });
-  next();
-});
+//we will use middleware.
+// userSchema.pre(["updateOne", "findOneAndUpdate"], function (next) {
+//   console.log("🔥 Middleware triggered!");
+//   this.set({ updatedAt: Date.now() });
+//   next();
+// });
 
 const User = mongoose.model("User", userSchema);
 
@@ -25,7 +31,7 @@ console.log("📄 Found user:", found);
 
 const result = await User.updateOne(
   { name: "Chetan Rana" },
-  { $set: { age: 25 } }
+  { $set: { age: 55 } }
 );
 
 console.log("✅ Update result:", result);
