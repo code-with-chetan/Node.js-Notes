@@ -24,7 +24,7 @@ const User = mongoose.model("user", userSchema);
 const userData = [
   { name: "Chetan rana", email: "chetan450@gmail.com", age: 20 },
   { name: "pawan k.c", email: "pawan@gmail.com", age: 21 },
-  { name: "Birendra Shahi", email: "birendra@gmail.com", age: 22 },
+  { name: "Birendra Shahi", email: "bi@gmail.com", age: 22 },
 ];
 
 //?Insert Operation.
@@ -37,7 +37,7 @@ const userData = [
 
 //?Update Operation.
 // const userUpdate = await User.updateOne(
-//   { email: "birendra@gmail.com" },
+//   { email: "buioo@gmail.com" },
 //   { $set: { age: 30 } }
 // );
 // console.log(userUpdate);
